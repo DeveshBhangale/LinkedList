@@ -50,6 +50,11 @@ public class Runner {
 		//Use Case 8
 		l1.insertNodeAfterSpecificValue(30,new MyNode<>(40));
 		l1.print();
+	
+		//Use Case 9
+		l1.delete(30);
+		l1.print();
+		System.out.println("List Size: "+l1.size());
 	}
 
 }
