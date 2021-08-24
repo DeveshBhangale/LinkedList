@@ -19,6 +19,18 @@ public class MyLinkedList<K> {
 			head.setNext(tempNode);
 		}		
 	}
+	
+	public void insertNode(int index, INode<K> newNode) {
+		int cnt=0;
+		INode<K> tempNode = head;
+		while(cnt == index) {
+			tempNode = tempNode.getNext();
+			cnt++;
+		}
+		INode<K> next = tempNode.getNext();
+		tempNode.setNext(newNode);
+		newNode.setNext(next);
+	}
 	public void print() {
 		INode<K> tempNode = head;
 		StringBuffer str = new StringBuffer("My Nodes: ");
