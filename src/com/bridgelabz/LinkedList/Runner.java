@@ -55,6 +55,12 @@ public class Runner {
 		l1.delete(30);
 		l1.print();
 		System.out.println("List Size: "+l1.size());
+		
+		
+		//Use Case 10
+		l1.add(new MyNode<>(70));
+		l1.add(new MyNode<>(56));
+		l1.sort();
 	}
 
 }

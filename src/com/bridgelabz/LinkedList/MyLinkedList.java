@@ -97,6 +97,60 @@ public class MyLinkedList<K> {
 		} 
 	}
 	
+	public static void swap(int[] arr, int i, int j)
+	{
+	    int temp = arr[i];
+	    arr[i] = arr[j];
+	    arr[j] = temp;
+	}
+	
+	public static int split(int[] arr, int l, int h)
+	{
+		int pivot = arr[h]; 
+	    int i = (l - 1); 
+	    for(int j = l; j <= h - 1; j++)
+	    {
+	        if (arr[j] < pivot) 
+	        {
+	            i++; 
+	            swap(arr, i, j);
+	        }
+	    }
+	    swap(arr, i + 1, h);
+	    return (i + 1);
+	}
+	
+	public static void quickSort(int[] arr, int l, int h)
+	{
+	    if (l< h) 
+	    {
+	        int sp = split(arr, l, h);
+	        quickSort(arr, l, sp - 1);
+	        quickSort(arr, sp + 1, h);
+	    }
+	}
+	
+	public void sort() {
+		int arr[] = new int[20];
+		int i = 0;
+		INode<K> tempNode = this.head;
+		while(tempNode != null) {
+			arr[i] = (Integer)tempNode.getKey();
+			i++;
+			tempNode = tempNode.getNext();
+		}
+		quickSort(arr, 0, arr.length - 1);
+		StringBuffer str1 = new StringBuffer("My Nodes: ");
+		for(int j=0;j<20;j++) {
+			if(arr[j] != 0 && j!=19) {
+				str1.append(arr[j]+ "->");
+			}
+		} 
+		if(arr[19]!=0)
+			str1.append(arr[19]);
+		System.out.println(str1);
+	}
+	
 	public void print() {
 		INode<K> tempNode = head;
 		StringBuffer str = new StringBuffer("My Nodes: ");
