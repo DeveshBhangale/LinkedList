@@ -20,9 +20,15 @@ public class Runner {
 		
 		//Use Case 2
 		MyLinkedList l1 = new MyLinkedList();
-		l1.add(firstNode);
-		l1.add(secondNode);
+//		l1.add(firstNode);
+//		l1.add(secondNode);
+//		l1.add(thirdNode);
+//		l1.print();
+		
+		//Use Case 3
 		l1.add(thirdNode);
+		l1.add(secondNode);
+		l1.add(firstNode);
 		l1.print();
 	}
 
