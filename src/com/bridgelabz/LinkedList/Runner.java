@@ -45,7 +45,11 @@ public class Runner {
 		l1.print();
 		
 		//Use Case 7
-		l1.searchNode(3);
+		l1.searchNode(30);
+		
+		//Use Case 8
+		l1.insertNodeAfterSpecificValue(30,new MyNode<>(40));
+		l1.print();
 	}
 
 }

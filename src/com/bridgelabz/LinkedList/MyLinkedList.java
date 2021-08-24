@@ -32,6 +32,21 @@ public class MyLinkedList<K> {
 		newNode.setNext(next);
 	}
 	
+	public void insertNodeAfterSpecificValue(int myNode,INode<K> newNode) {
+		INode<K> tempNode = head;
+		while(tempNode != null) {
+			if((Integer)tempNode.getKey() == myNode) {
+				INode<K> next = tempNode.getNext();
+				tempNode.setNext(newNode);
+				newNode.setNext(next);
+				if(tempNode.equals(tail)) {
+					tail = newNode;
+				}
+				break;
+			}
+			tempNode = tempNode.getNext();
+		}
+	}
 	public void pop() {
 		INode<K> tempNode = this.head;
 		this.head = head.getNext();
@@ -55,8 +70,7 @@ public class MyLinkedList<K> {
 				break;
 			}
 			tempNode = tempNode.getNext();
-			index++;
-			
+			index++;			
 		} 
 	}
 	
