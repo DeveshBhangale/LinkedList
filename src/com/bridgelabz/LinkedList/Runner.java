@@ -35,6 +35,10 @@ public class Runner {
 		//Use Case 4
 		l1.insertNode(1, fourthNode);
 		l1.print();
+		
+		//Use Case 5
+		l1.pop();
+		l1.print();
 	}
 
 }
