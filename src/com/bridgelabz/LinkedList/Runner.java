@@ -39,6 +39,10 @@ public class Runner {
 		//Use Case 5
 		l1.pop();
 		l1.print();
+		
+		//Use Case 6
+		l1.popLast();
+		l1.print();
 	}
 
 }

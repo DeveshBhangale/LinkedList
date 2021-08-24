@@ -32,10 +32,18 @@ public class MyLinkedList<K> {
 		newNode.setNext(next);
 	}
 	
-	public INode<K> pop() {
+	public void pop() {
 		INode<K> tempNode = this.head;
 		this.head = head.getNext();
-		return tempNode;
+	}
+	
+	public void popLast() {
+		INode<K> tempNode = this.head;
+		while(!tempNode.getNext().equals(tail)) {
+			tempNode = tempNode.getNext();
+		}
+		tail = tempNode;
+		tempNode.setNext(null);	
 	}
 	
 	public void print() {
