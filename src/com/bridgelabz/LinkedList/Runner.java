@@ -43,6 +43,9 @@ public class Runner {
 		//Use Case 6
 		l1.popLast();
 		l1.print();
+		
+		//Use Case 7
+		l1.searchNode(3);
 	}
 
 }
