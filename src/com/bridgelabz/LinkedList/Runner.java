@@ -17,6 +17,7 @@ public class Runner {
 		MyNode<Integer> secondNode = new MyNode<>(30);
 		MyNode<Integer> thirdNode = new MyNode<>(56);
 		
+		
 		//Use Case 2
 		MyLinkedList l1 = new MyLinkedList();
 		l1.add(firstNode);
